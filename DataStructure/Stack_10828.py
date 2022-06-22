@@ -1,3 +1,4 @@
+# 백준 10828, 스택, 실버4
 import sys
 
 stack = []
