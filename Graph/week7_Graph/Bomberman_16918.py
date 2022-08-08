@@ -17,7 +17,7 @@ def installBomb(graph, q):
 def bfs(graph, q):
     while q:
         x, y = q.popleft()
-        graph[x][y] == '.'
+        graph[x][y] = '.'
 
         for i in range(4):
             nx = dx[i] + x
