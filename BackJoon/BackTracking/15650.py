@@ -1,13 +1,13 @@
 # Silver 3 - N과 M (2)
 
 # Combination
-# from itertools import combinations
+from itertools import combinations
 
-# n, m = map(int, input().split())
-# s = [i for i in range(1, n + 1)]
+n, m = map(int, input().split())
+s = [i for i in range(1, n + 1)]
 
-# for com in combinations(s, m):
-#     print(*map(int, com))
+for com in combinations(s, m):
+    print(*map(int, com))
 
 # BackTracking
 n, m = map(int, input().split())
