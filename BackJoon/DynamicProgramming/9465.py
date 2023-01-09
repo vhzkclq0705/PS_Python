@@ -1,4 +1,5 @@
-# 백준 9465, 스티커, 실버1
+# Silver 1 - 스티커
+
 import sys
 input = sys.stdin.readline
 

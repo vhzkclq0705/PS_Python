@@ -1,4 +1,5 @@
-# 백준 9095, 1, 2, 3 더하기, 실버3
+# Silver 3 - 1, 2, 3 더하기
+
 import sys
 imput = sys.stdin.readline
 

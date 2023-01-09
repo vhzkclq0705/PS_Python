@@ -1,4 +1,5 @@
-# 백준 2579, 계단 오르기, 실버3
+# Silver 3 - 계단 오르기
+
 import sys
 input = sys.stdin.readline
 

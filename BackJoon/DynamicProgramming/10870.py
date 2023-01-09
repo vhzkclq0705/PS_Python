@@ -1,4 +1,5 @@
-# 백준 10870, 피보나치 수5, 브론즈5
+# Bronze 5 - 피보나치 수5
+
 import sys
 input = sys.stdin.readline
 

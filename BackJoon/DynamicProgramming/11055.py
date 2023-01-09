@@ -1,4 +1,5 @@
-# 백준 11055, 가장 큰 증가 부분 수열, 실버 2
+# Silver 2 - 가장 큰 증가 부분 수열
+
 import sys
 input = sys.stdin.readline
 

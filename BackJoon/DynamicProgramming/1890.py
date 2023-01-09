@@ -1,4 +1,5 @@
-# 백준 1890, 점프, 실버 1
+# Silver 1 - 점프
+
 import sys
 input = sys.stdin.readline
 

@@ -1,4 +1,5 @@
-# 백준 2407, 조합, 실버4
+# Silver 4 -조합
+
 import sys
 import math
 input = sys.stdin.readline

@@ -1,4 +1,5 @@
-#백준 9655, 돌 게임, 실버5
+# Silver 5 - 돌 게임
+
 import sys
 input = sys.stdin.readline
 
