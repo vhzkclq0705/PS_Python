@@ -6,7 +6,7 @@ input = sys.stdin.readline
 
 def bfs(x, y, d):
     q = deque([(x, y)])
-    board[x][y] = 1
+    board[x][y] = 2
     cnt = 1
 
     while q:
@@ -14,19 +14,19 @@ def bfs(x, y, d):
 
         for _ in range(4):
             d = (d + 3) % 4
-            nx = x + p[d][0]
-            ny = y + p[d][1]
+            nx = x + dx[d]
+            ny = y + dy[d]
 
             if 0 <= nx < n and 0 <= ny < m and board[nx][ny] == 0:
-                board[nx][ny] = 1
+                board[nx][ny] = 2
                 q.append((nx, ny))
                 cnt += 1
                 break
         else:
-            nx = x - p[d][0]
-            ny = y - p[d][1]
+            nx = x - dx[d]
+            ny = y - dy[d]
 
-            if board[nx][ny] == -1:
+            if board[nx][ny] == 1:
                 return cnt
             else:
                 q.append((nx, ny))
@@ -35,6 +35,7 @@ def bfs(x, y, d):
 
 n, m = map(int, input().split())
 r, c, d = map(int, input().split())
-board = [list(map(lambda x: int(x) * -1, input().split())) for _ in range(n)]
-p = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+board = [list(map(int, input().split())) for _ in range(n)]
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 print(bfs(r, c, d))
