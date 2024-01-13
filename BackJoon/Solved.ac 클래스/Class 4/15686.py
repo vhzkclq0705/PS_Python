@@ -7,7 +7,7 @@
 
 # n, m = map(int, input().split())
 # board = [list(map(int, input().split())) for _ in range(n)]
-# ans = 99999999
+# ans = 999999
 # chickens = []
 # houses = []
 
@@ -20,10 +20,10 @@
 
 # for chicken in combinations(chickens, m):
 #     dis = 0
-#     for house in houses:
+#     for hx, hy in houses:
 #         min_dis = 100
 #         for i in range(m):
-#             min_dis = min(min_dis, abs(house[0] - chicken[i][0]) + abs(house[1] - chicken[i][1]))
+#             min_dis = min(min_dis, abs(hx - chicken[i][0]) + abs(hy - chicken[i][1]))
 #         dis += min_dis
 
 #     ans = min(ans, dis)
