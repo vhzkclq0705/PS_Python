@@ -4,9 +4,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-energy = sorted(list(map(int, input().split())))
+energy = list(map(int, input().split()))
+m_e = max(energy)
 
-for i in range(n - 1):
-    energy[-1] += energy[i] / 2
-
-print(energy[-1])
+print(m_e + (sum(energy) - m_e) / 2)
