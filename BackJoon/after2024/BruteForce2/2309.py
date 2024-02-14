@@ -7,4 +7,4 @@ tall = [int(input()) for _ in range(9)]
 for com in combinations(tall, 7):
     if sum(com) == 100:
         print('\n'.join(map(str, sorted(com))))
-        break
+        break 
