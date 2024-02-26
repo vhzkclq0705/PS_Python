@@ -1,12 +1,27 @@
 # Silver 3 - 숫자 야구
 
-# import sys
-# input = sys.stdin.readline
+import sys
+from itertools import permutations
+input = sys.stdin.readline
 
-# n = int(input())
-# nums = [list(map(int, input().split())) for _ in range(n)]
-# tmp = product(list(range(1, 10)), 3)
-# ans = 0
-# print(list(tmp))
-# for num, s, b in nums:
-    
+n = int(input())
+nums = list(permutations(list(range(1, 10)), 3))
+
+for _ in range(n):
+    num, s, b = map(int, input().split())
+    tmp = []
+
+    for check in nums:
+        cnt_s, cnt_b = 0, 0
+
+        for i, str_num in enumerate(str(num)):
+            if int(str_num) == check[i]:
+                cnt_s += 1
+            if int(str_num) != check[i] and int(str_num) in check:
+                cnt_b += 1
+
+        if s == cnt_s and b == cnt_b:
+            tmp.append(check)
+    nums = tmp
+
+print(len(nums))
