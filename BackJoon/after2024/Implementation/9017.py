@@ -1,4 +1,4 @@
-# Silver 3 - 등수 구하기
+# Silver 3 - 크로스 컨트리
 
 import sys
 from collections import Counter, defaultdict
