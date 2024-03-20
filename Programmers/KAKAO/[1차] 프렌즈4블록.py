@@ -2,8 +2,7 @@
 
 def solution(m, n, board):
     answer = 0
-    board = [list(i) for i in zip(*board)][::-1]
-    m, n = n, m
+    board = [list(i) for i in board]
     visited = set()
     
     while True:
@@ -20,9 +19,9 @@ def solution(m, n, board):
         else:
             break
         
-        for x in range(m):
-            tmp = [board[x][y] for y in range(n - 1, -1, -1) if board[x][y]]
-            for y in range(n):
-                board[x][y] = '' if y < n - len(tmp) else tmp.pop()
+        for y in range(n):
+            tmp = [board[x][y] for x in range(m - 1, -1, -1) if board[x][y]]
+            for x in range(m):
+                board[x][y] = '' if x < m - len(tmp) else tmp.pop()
                 
     return answer
